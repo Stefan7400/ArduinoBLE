@@ -28,6 +28,7 @@ enum BLEDeviceEvent {
   BLEConnected = 0,
   BLEDisconnected = 1,
   BLEDiscovered = 2,
+  BLEMtuExchanged = 3,
 
   BLEDeviceLastEvent
 };

@@ -698,6 +698,9 @@ void ATTClass::mtuReq(uint16_t connectionHandle, uint8_t dlen, uint8_t data[])
     uint16_t mtu;
   } mtuResp = { ATT_OP_MTU_RESP, mtu };
 
+  //Trigger the exchange mtu event
+  _eventHandlers[BLEMtuExchanged](BLEDevice());
+
   HCI.sendAclPkt(connectionHandle, ATT_CID, sizeof(mtuResp), &mtuResp);
 }
 

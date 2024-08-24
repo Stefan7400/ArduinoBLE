@@ -169,7 +169,7 @@ private:
     uint8_t length;
   } _pendingResp;
 
-  BLEDeviceEventHandler _eventHandlers[2];
+  BLEDeviceEventHandler _eventHandlers[4];
 };
 
 extern ATTClass& ATT;
